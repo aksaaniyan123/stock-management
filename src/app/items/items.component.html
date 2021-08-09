@@ -1,0 +1,74 @@
+<div class="row">
+    <div class="col-mid-4"></div>
+    <div class="col-md-4 text-center">
+
+        <h3 class="marq">
+            <marquee scrollamount="5">AVAILABLE ITEMS</marquee>
+        </h3>
+
+        <!-- <div class="table-responsive">
+            <table class="table table-success table-striped">
+
+
+                <thead class="table-dark">
+                    <tr>
+                        <th>CODE</th>
+                        <th>ITEMS </th>
+
+
+                    </tr>
+                </thead>
+
+                <tbody>
+
+                    <tr *ngFor="let details of itemDetail">
+                        <td>{{details["code"]}}</td>
+                        <td>{{details["name"]}}</td>
+
+
+
+                        <td><button type="button" class="btn" [routerLink]="['/view', details.code]">view
+                                detail</button></td>
+                    </tr>
+                </tbody>
+
+            </table>
+        </div>
+    </div>
+</div> -->
+
+
+
+
+    
+
+ 
+    <table class="table-dark">
+  
+        <tr>
+            <th>ITEMID</th>&nbsp;&nbsp;   &nbsp;&nbsp;
+
+            <th>ITEMNAME </th>   &nbsp;&nbsp;   &nbsp;&nbsp;
+            
+
+         
+        </tr>
+    
+    </table>
+    
+           
+    <tr   *ngFor="for let elements of result" >
+        
+          
+        <td>{{elements[0]}} </td>&nbsp;&nbsp;  &nbsp;&nbsp;
+        <td>{{elements[1]}}</td>&nbsp;&nbsp;  &nbsp;&nbsp;
+      
+                
+           
+         
+                <button type="button" [routerLink]="['/view', elements[0]]" >Get Full Data</button>&nbsp;&nbsp;  &nbsp;&nbsp;
+            
+       
+   
+    </tr>
+

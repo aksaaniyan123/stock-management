@@ -1,1 +1,28 @@
 /* You can add global styles to this file, and also import other style files */
+/* 
+.container{
+    background:url(assets/images/bankimg.jpeg);
+    background-size: cover;
+    height: 900px;
+    
+} */
+body{
+    margin-top:0px;
+    padding: 0px;
+}
+h1{
+    background-color: aquamarine;
+    text-align: center;
+    margin-top:0px;
+    padding: 0px;
+    
+}
+ a{
+
+   border: 2px solid blue;
+  margin-right: 20px;
+}
+.link1{
+    float: right;
+    top: 50px;
+}

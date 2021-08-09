@@ -1,0 +1,7 @@
+.img{
+    background-image: url(../home/image/invent.jpeg);
+    background-size: cover;
+background-repeat: no-repeat;
+ height: 850px;
+width: 100%;
+}
