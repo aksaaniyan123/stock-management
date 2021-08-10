@@ -9,6 +9,8 @@ import { ItemsComponent } from './items/items.component';
 import { ViewitemsComponent } from './viewitems/viewitems.component';
 import { HomeComponent } from './home/home.component';
 import{ HttpClientModule}from '@angular/common/http';
+import { InsertComponent } from './insert/insert.component';
+import { EditComponent } from './edit/edit.component';
 
 
 @NgModule({
@@ -17,7 +19,9 @@ import{ HttpClientModule}from '@angular/common/http';
     LoginComponent,
     ItemsComponent,
     ViewitemsComponent,
-    HomeComponent
+    HomeComponent,
+    InsertComponent,
+    EditComponent
   ],
   imports: [
     BrowserModule,

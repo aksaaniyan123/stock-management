@@ -1,3 +1,19 @@
-.btn {
+/*.btn {
     background-color: cornflowerblue;
+}*/
+.tb{
+    position: relative;
+    top:50px;
+}
+.btn1{
+    position: relative;
+    left: 100px;
+    top:20px;
+
+}
+.head{
+    background-color: dimgray;
+    color:#FFF;
+    font-weight: 800;
+    font-family: Arial, Helvetica, sans-serif;
 }

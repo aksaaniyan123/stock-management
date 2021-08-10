@@ -12,7 +12,7 @@ import { DataService } from '../data.service';
 export class ItemsComponent implements OnInit {
   flag=0;
   itcode="";
-  
+ 
   result:any[]=[];
   
 
@@ -63,6 +63,11 @@ export class ItemsComponent implements OnInit {
   //     console.log(result);
       
   //   })
+  add(){
+    
+      this.router.navigateByUrl('insert')
+    }
   }
+  
  
 

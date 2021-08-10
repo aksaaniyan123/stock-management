@@ -1,13 +1,10 @@
 
-<div class="row">
-    <div class="col-mid-4"></div>
-    
-    <div class="col-md-4 text-center">
-      
-      
-       
-    <h3 class="test"> <marquee scrollamount="10">ITEM DETAIL VIEW</marquee></h3>
-    
+<div class="container">
+    <div class="row">
+        <div class="col-4"></div>
+        <div class="col-4">
+            <div class="tb">
+                <h1 class="head">ITEM DETAILS</h1>
     <table class="table-dark">
   
         <tr>
@@ -21,9 +18,9 @@
 
          
         </tr>
-    
+        
     </table>
-    
+   
    <tbody id="contents" *ngFor=" let elements of results">
  
     <tr *ngIf="id==elements[0]">
@@ -40,7 +37,8 @@
         <td><button type="button" (click)="edit(elements[0])">Delete</button></td>
         <td></td> -->
 
-
+<td><button type="button" class="btn btn-danger" (click)="edit(elements[0],elements[1],elements[2],elements[3],elements[4])">Edit</button></td>  &nbsp;&nbsp;
+        <td><button type="button"  class="btn btn-primary"(click)="delete(elements[0])">Delete</button></td>
 
 
 
@@ -54,13 +52,14 @@
 </tbody>
     
     
-<button type="button">ADD</button>&nbsp;&nbsp;
-<button type="button">EDIT</button>&nbsp;&nbsp;
-<button type="button">DELETE</button>&nbsp;&nbsp;
-    
+
     </div>
     
-    
-    
-    
-    </div>
+   <div> <button (click)="goback()" >Go Back</button></div>
+   <div *ngIf ="flag">         
+          <!--when click on edit button then only the update form is visible to set this use the flag here  -->
+              
+   <app-edit [itemid]="itid" [itemname]="itname" [price]="iprice" [stock]="istock" [company]="icompany"  ></app-edit>
+</div>
+  </div>
+  
