@@ -1,31 +1,36 @@
 <section>
     <div class="container">
         <div class="form">
-            <h1>ADD NEW MEMBER</h1>
+            <h1 class="main">ADD NEW MEMBER</h1>
 
-            <form>
+            <form [formGroup]="insertForm">
 
                 <br>
-                <div class="mb-3 inputBox">
+                <div class="mb-3 inputBox form">
 
-                    <input type="text" class="form-control" id="" name=" id" placeholder="Item id" [(ngModel)]="itemid">
-
+                    <input type="text" class="form-control" id="" name=" id" placeholder="Item id" formControlName="itemid">
+                    <div *ngIf="(insertForm.get('itemid')?.touched || insertForm.get('itemid')?.dirty) && insertForm.get('itemid')?.errors"class="error">Invalid ItemId</div>
+                   
                 </div> <br>
-                <div class="mb-3 inputBox">
+                <div class="mb-3 inputBox form">
 
-                    <input type="text" class="form-control" id="" name="name" placeholder="Item Name" [(ngModel)]="itemname" >
+                    <input type="text" class="form-control" id="" name="name" placeholder="Item Name"formControlName="itemname" >
+                    <div *ngIf="(insertForm.get('itemname')?.touched || insertForm.get('itemname')?.dirty) && insertForm.get('itemname')?.errors"class="error">Invalid Itemname</div>
                 </div> <br>
-                <div class="mb-3 inputBox">
+                <div class="mb-3 inputBox form">
 
-                    <input type="text" class="form-control" id="" name="adress1" placeholder="Price"  [(ngModel)]="price">
+                    <input type="text" class="form-control" id="" name="adress1" placeholder="Price"  formControlName="price">
+                    <div *ngIf="(insertForm.get('price')?.touched || insertForm.get('price')?.dirty) && insertForm.get('price')?.errors"class="error">Invalid Price</div>
                 </div> <br>
-                <div class="mb-3 inputBox">
+                <div class="mb-3 inputBox form">
 
-                    <input type="text" class="form-control" id="" name="stk" placeholder="Stock" [(ngModel)]="stock" >
+                    <input type="text" class="form-control" id="" name="stk" placeholder="Stock" formControlName="stock" >
+                    <div *ngIf="(insertForm.get('stock')?.touched || insertForm.get('stock')?.dirty) && insertForm.get('stock')?.errors"class="error">Invalid Stock</div>
                 </div> <br>
-                <div class="mb-3 inputBox">
+                <div class="mb-3 inputBox form">
 
-                    <input type="text" class="form-control" id="" name="com" placeholder="Company" [(ngModel)]="company" >
+                    <input type="text" class="form-control" id="" name="com" placeholder="Company" formControlName="company" >
+                    <div *ngIf="(insertForm.get('company')?.touched || insertForm.get('company')?.dirty) && insertForm.get('company')?.errors"class="error">Invalid Company</div>
                 </div> <br>
 
 

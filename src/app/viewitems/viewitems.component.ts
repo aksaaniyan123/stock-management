@@ -35,12 +35,6 @@ export class ViewitemsComponent implements OnInit {
             if (key == "rows") {
               this.results = elements['rows']
               console.log(this.results)
-              for(let i=0;i<this.results.length;i++)
-              {
- 
-              }
-             
- 
             
             }
           }

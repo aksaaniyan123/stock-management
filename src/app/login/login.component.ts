@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-login',
@@ -7,27 +9,39 @@ import { Router } from '@angular/router';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-  uname="";
-pswd="";
+  uname = "";
+  pswd = "";
 
-  constructor(private router: Router) { }
+
+  loginForm = this.fb.group({
+    
+    uname: ['', [Validators.required, Validators.pattern('[a-zA-Z]*')]],
+
+    pswd: ['', [Validators.required, Validators.pattern('[a-zA-Z0-9]*')]]
+
+  })
+
+  constructor(private router: Router, private fb: FormBuilder) { }
 
   ngOnInit(): void {
   }
 
 
-login(){
-  var name=this.uname;
-  var pass=this.pswd;
-  if (name=="admin" && pass=="admin1234")
-  {
-  
-  alert("login successfull")
+  login() {
+    if (this.loginForm.valid) {
+      var name1 = this.loginForm.value.uname;
+      var pass = this.loginForm.value.pswd;
+      if (name1 == "admin" && pass == "admin1234") {
+        // if (name=="admin" && pass=="admin1234")
+        // {
 
-this.router.navigateByUrl("items")
-}
-else{
-  alert("invalid account")
-}
-}
+        alert("login successfull")
+
+        this.router.navigateByUrl("items")
+      }
+      else {
+        alert("invalid account")
+      }
+    }
+  }
 }

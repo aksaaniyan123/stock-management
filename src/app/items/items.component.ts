@@ -28,7 +28,7 @@ export class ItemsComponent implements OnInit {
   constructor(private router: Router,private dataservice:DataService) { }
 
   ngOnInit(): void {
-    console.log(this.result)
+    
     this.dataservice.getlist()
       .subscribe((result: any) => {
  
